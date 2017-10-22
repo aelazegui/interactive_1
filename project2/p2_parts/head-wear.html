@@ -159,7 +159,7 @@ $(document).ready(function() {
   }
 
   .scene2 {
-    background-color:red;
+    background-color:#45cc78;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -230,19 +230,28 @@ $(document).ready(function() {
     transition: all .5s ease-in-out;
   }
 
-  .make-transparent {
-    opacity:.2;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-  }
+
+
 
   .nonmoving-face {
       position: fixed;
+      align: center;
       width: 40vw;
-      height: 40vw;
+      height: 50vw;
       background-color: black;
+      z-index: 3;
+      opacity: .4;
+      bottom: 0px;
+      margin: auto;
+      margin-left: 30vw;
+  }
+
+  .moving-bodies {
+      position: relative;
+      width: 40vw;
+      height: 50vw;
+      background-color: none;
+      z-index: 2;
       opacity: .4;
       bottom: 0px;
       margin: auto;
@@ -256,48 +265,50 @@ $(document).ready(function() {
 
   <body>
 
-  <div class="nonmoving-face"></div>
+  <div class="nonmoving-face">
+    <img class="moving-bodies" src="p2images/eyes-shoulders.png">
+  </div>
 
   <div>
 
   <div class="scene scene1">
-    <img class="headwrap" src="p2images/headwrap.png">
+    <img class="moving-bodies" src="p2images/headwrap.png">
   </div>
 
   <div class="scene scene2">
-    <img class="sikhturban" src="p2images/sikhturban.png">
+    <img class="moving-bodies" src="p2images/sikhturban.png">
   </div>
 
   <div class="scene scene3">
-    <img class="dreads" src="p2images/dreads.png">
+    <img class="moving-bodies" src="p2images/dreads.png">
   </div>
 
   <div class="scene scene4">
-    <img class="hijab" src="p2images/hijab.png">
+    <img class="moving-bodies" src="p2images/hijab.png">
   </div>
 
   <div class="scene scene5">
-    <img class="beardman" src="p2images/beardman.png">
+    <img class="moving-bodies" src="p2images/beardman.png">
   </div>
 
   <div class="scene scene6">
-    <img class="jew" src="p2images/jew.png">
+    <img class="moving-bodies" src="p2images/jew.png">
   </div>
 
   <div class="scene scene7">
-    <img class="monk" src="p2images/monk.png">
+    <img class="moving-bodies" src="p2images/monk.png">
   </div>
 
   <div class="scene scene8">
-    <img class="niqab" src="p2images/niqab.png">
+    <img class="moving-bodies" src="p2images/niqab.png">
   </div>
 
   <div class="scene scene9">
-    <img class="afro" src="p2images/afro.png">
+    <img class="moving-bodies" src="p2images/afro.png">
   </div>
 
   <div class="scene scene10">
-    <img class="tattoo" src="p2images/tattoo.png">
+    <img class="moving-bodies" src="p2images/tattoo.png">
   </div>
 
   </div>
