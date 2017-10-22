@@ -6,17 +6,56 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-$('html, body').animate({
-    scrollTop: ${".scene2").offset().top
-  }, 200);
-  $(window).bind("mousewheel", function() {
-    $("html, body").stop();
-  });
-  return false;
+<script>
+
+<!--Mousewheel "snap to position"-->
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 700 && scroll <= 900) {
+    $(".scene").removeClass("active");
+    $(".scene2").addClass("active");
+
+    $('html, body').animate({
+        scrollTop: $(".scene2").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= 1400 && scroll <= 1800) {
+    $(".scene").removeClass("active");
+    $(".scene3").addClass("active");
+
+    $('html, body').animate({
+        scrollTop: $(".scene3").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= 2100 && scroll <= 2700) {
+    $(".scene").removeClass("active");
+    $(".scene4").addClass("active");
+
+    $('html, body').animate({
+        scrollTop: $(".scene4").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
 });
 
+<!--Color Transition-->
 
 $(document).ready(function() {
 	var s = $("body");
