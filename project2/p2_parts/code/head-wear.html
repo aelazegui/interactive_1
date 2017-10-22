@@ -17,6 +17,85 @@ $('html, body').animate({
   return false;
 });
 
+
+$(document).ready(function() {
+	var s = $("body");
+  var seethru = $(".bigbox");
+	var pos = s.position();
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= pos.top & windowpos <=600) {
+      s.addClass("scene1");
+      s.removeClass("scene2");
+      s.removeClass("scene3");
+      s.removeClass("scene4");
+      s.removeClass("scene5");
+      s.removeClass("scene6");
+      s.removeClass("scene7");
+      s.removeClass("scene8");
+      s.removeClass("scene9");
+      s.removeClass("scene10");
+		}
+
+    else if (windowpos >= pos.top & windowpos >=1200 & windowpos <=1799) {
+      s.addClass("scene2");
+      s.removeClass("scene1");
+      s.removeClass("scene3");
+      s.removeClass("scene4");
+      s.removeClass("scene5");
+      s.removeClass("scene6");
+      s.removeClass("scene7");
+      s.removeClass("scene8");
+      s.removeClass("scene9");
+      s.removeClass("scene10");
+    }
+
+    else if (windowpos >= pos.top & windowpos >=1800 & windowpos <=2399) {
+      s.addClass("scene3");
+      seethru.addClass("make-transparent");
+      s.removeClass("scene1");
+      s.removeClass("scene2");
+      s.removeClass("scene4");
+      s.removeClass("scene5");
+      s.removeClass("scene6");
+      s.removeClass("scene7");
+      s.removeClass("scene8");
+      s.removeClass("scene9");
+      s.removeClass("scene10");
+    }
+
+    else if (windowpos >= pos.top & windowpos >=2400 & windowpos <=2999) {
+      s.addClass("scene4");
+      s.removeClass("scene1");
+      s.removeClass("scene2");
+      s.removeClass("scene3");
+      s.removeClass("scene5");
+      s.removeClass("scene6");
+      s.removeClass("scene7");
+      s.removeClass("scene8");
+      s.removeClass("scene9");
+      s.removeClass("scene10");
+    }
+
+    else if (windowpos >= pos.top & windowpos >=3000) {
+      s.addClass("scene5");
+      s.removeClass("scene1");
+      s.removeClass("scene2");
+      s.removeClass("scene3");
+      s.removeClass("scene4");
+      s.removeClass("scene6");
+      s.removeClass("scene7");
+      s.removeClass("scene8");
+      s.removeClass("scene9");
+      s.removeClass("scene10");
+    }
+
+    else {
+			s.removeClass("sticka");
+		}
+	});
+});
+
 </script>
 
   </head>
@@ -25,16 +104,113 @@ $('html, body').animate({
 
 
   <style>
+
+
+  .scene {
+    height:100vh;
+    weight:100vw;
+  }
+
+  .scene1 {
+    background-color:black;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene2 {
+    background-color:red;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene3 {
+    background-color:yellow;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene4 {
+    background-color:green;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene5 {
+    background-color:blue;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene6 {
+    background-color:purple;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene7 {
+    background-color:pink;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene8 {
+    background-color:#9e126f;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene9 {
+    background-color:#e28c02;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene10 {
+    background-color:#16b3cc;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .make-transparent {
+    opacity:.2;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
   .nonmoving-face {
       position: fixed;
       width: 40vw;
       height: 40vw;
-      background-color: white;
+      background-color: black;
       opacity: .4;
       bottom: 0px;
       margin: auto;
       margin-left: 30vw;
   }
+
+
   </style>
 
 
@@ -43,6 +219,31 @@ $('html, body').animate({
 
   <div class="nonmoving-face"></div>
 
+  <div>
+
+  <div class="scene scene1"></div>
+
+  <div class="scene scene2"></div>
+
+  <div class="scene scene3">
+  <img class="tree" src="images/tree.png">
+  </div>
+
+  <div class="scene scene4"></div>
+
+  <div class="scene scene5"></div>
+
+  <div class="scene scene6"></div>
+
+  <div class="scene scene7"></div>
+
+  <div class="scene scene8"></div>
+
+  <div class="scene scene9"></div>
+
+  <div class="scene scene10"></div>
+
+  </div>
 
 
 
