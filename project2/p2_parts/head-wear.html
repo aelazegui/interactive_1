@@ -31,6 +31,7 @@ $(window).scroll(function() {
   if (scroll >= 1400 && scroll <= 1800) {
     $(".scene").removeClass("active");
     $(".scene3").addClass("active");
+    $(".img-tattoo-eyes").addClass("turnon");
 
     $('html, body').animate({
         scrollTop: $(".scene3").offset().top
@@ -44,6 +45,7 @@ $(window).scroll(function() {
   if (scroll >= 2100 && scroll <= 2700) {
     $(".scene").removeClass("active");
     $(".scene4").addClass("active");
+    $(".img-tattoo-eyes").removeClass("turnon");
 
     $('html, body').animate({
         scrollTop: $(".scene4").offset().top
@@ -238,10 +240,8 @@ $(document).ready(function() {
       align: center;
       width: 40vw;
       height: 50vw;
-      background-color: black;
       z-index: 3;
-      opacity: .4;
-      bottom: 0px;
+bottom: 16.9vh;
       margin: auto;
       margin-left: 30vw;
   }
@@ -252,12 +252,35 @@ $(document).ready(function() {
       height: 50vw;
       background-color: none;
       z-index: 2;
-      opacity: .4;
       bottom: 0px;
       margin: auto;
       margin-left: 30vw;
   }
 
+  .img-shoulders {
+      position: relative;
+      width: 40vw;
+      height: 50vw;
+      z-index: 99999999 !important;
+      bottom: 0px;
+      margin-left: 0vw;
+  }
+
+  .detail-eyes {
+      position: absolute;
+      width: 40vw;
+      height: 50vw;
+      z-index: 99999999 !important;
+      bottom: 0px;
+      margin-left: 0vw;
+      margin-top: -117vh;
+      opacity:0;
+  }
+
+  .turnon {
+      opacity:1;
+      transition: ease 2s all;
+  }
 
   </style>
 
@@ -266,7 +289,11 @@ $(document).ready(function() {
   <body>
 
   <div class="nonmoving-face">
-    <img class="moving-bodies" src="p2images/eyes-shoulders.png">
+    <img class="img-shoulders" src="p2images/eyes-shoulders.png">
+    <img class="detail-eyes" src="p2images/tattoo-eyes.png">
+    <img class="detail-eyes" src="p2images/hijab-eyes.png">
+    <img class="detail-eyes" src="p2images/niqab-eyes.png">
+    <img class="detail-eyes" src="p2images/afrowoman-eyes.png">
   </div>
 
   <div>
