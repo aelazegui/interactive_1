@@ -1,12 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+$('html, body').animate({
+    scrollTop: ${".scene2").offset().top
+  }, 200);
+  $(window).bind("mousewheel", function() {
+    $("html, body").stop();
+  });
+  return false;
+});
+
+</script>
 
   </head>
+
+
+
+
   <style>
-body {
-background-color: black;
-}
-#defaultCanvas0 {
-  background-color: white;
-}
+  .nonmoving-face {
+      position: fixed;
+      width: 40vw;
+      height: 40vw;
+      background-color: white;
+      opacity: .4;
+      bottom: 0px;
+      margin: auto;
+      margin-left: 30vw;
+  }
   </style>
+
+
+
+  <body>
+
+  <div class="nonmoving-face"></div>
+
+
+
+
+  </body>
+  </html>
