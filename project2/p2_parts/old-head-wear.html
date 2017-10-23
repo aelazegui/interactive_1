@@ -19,8 +19,6 @@ $(window).scroll(function() {
     $(".scene").removeClass("active");
     $(".scene2").addClass("active");
 
-    $(".body").addClass(".body .turnblue");
-
 
     $('html, body').animate({
         scrollTop: $(".scene2").offset().top
@@ -137,7 +135,7 @@ $(document).ready(function() {
       s.removeClass("scene10");
     }
 
-    else if (windowpos >= pos.top & windowpos >=3000) {
+    else if (windowpos >= pos.top & windowpos >=3000 & windowpos <=2999) {
       s.addClass("scene5");
       s.removeClass("scene1");
       s.removeClass("scene2");
@@ -165,9 +163,6 @@ $(document).ready(function() {
 
   <style>
 
-body {
-  background-color; white;
-}
 
   .scene {
     height:100vh;
@@ -175,17 +170,15 @@ body {
   }
 
   .scene1 {
+    background-color:black;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
 
-  .bodyturnblue{
-    background: blue;
-  }
-
   .scene2 {
+    background-color:#45cc78;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -193,6 +186,7 @@ body {
   }
 
   .scene3 {
+    background-color:yellow;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -200,6 +194,7 @@ body {
   }
 
   .scene4 {
+    background-color:green;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -207,6 +202,7 @@ body {
   }
 
   .scene5 {
+    background-color:blue;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -214,6 +210,7 @@ body {
   }
 
   .scene6 {
+    background-color:purple;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -221,6 +218,7 @@ body {
   }
 
   .scene7 {
+    background-color:pink;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -228,6 +226,7 @@ body {
   }
 
   .scene8 {
+    background-color:#9e126f;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -235,6 +234,7 @@ body {
   }
 
   .scene9 {
+    background-color:#e28c02;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -242,6 +242,7 @@ body {
   }
 
   .scene10 {
+    background-color:#16b3cc;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -257,7 +258,7 @@ body {
       width: 40vw;
       height: 50vw;
       z-index: 3;
-bottom: 16.9vh;
+      bottom: 16.9vh;
       margin: auto;
       margin-left: 30vw;
   }
@@ -277,7 +278,7 @@ bottom: 16.9vh;
       position: relative;
       width: 40vw;
       height: 50vw;
-      z-index: 99999999 !important;
+      z-index: 999 !important;
       bottom: 0px;
       margin-top: 6vh;
       margin-left: 0vw;
@@ -287,7 +288,7 @@ bottom: 16.9vh;
       position: absolute;
       width: 40vw;
       height: 50vw;
-      z-index: 99999999 !important;
+      z-index: 998 !important;
       bottom: 0px;
       margin-left: 0vw;
       margin-top: -117vh;
@@ -298,7 +299,7 @@ bottom: 16.9vh;
       position: absolute;
       width: 40vw;
       height: 50vw;
-      z-index: 99999999 !important;
+      z-index: 997 !important;
       bottom: 0px;
       margin-left: 0vw;
       margin-top: -117vh;
@@ -309,7 +310,7 @@ bottom: 16.9vh;
       position: absolute;
       width: 40vw;
       height: 50vw;
-      z-index: 99999999 !important;
+      z-index: 996 !important;
       bottom: 0px;
       margin-left: 0vw;
       margin-top: -117vh;
@@ -320,7 +321,7 @@ bottom: 16.9vh;
       position: absolute;
       width: 40vw;
       height: 50vw;
-      z-index: 99999999 !important;
+      z-index: 995 !important;
       bottom: 0px;
       margin-left: 0vw;
       margin-top: -117vh;
@@ -328,7 +329,7 @@ bottom: 16.9vh;
   }
 
   .turnon {
-      opacity:1;
+      opacity: 1;
       transition: ease 2s all;
   }
 
