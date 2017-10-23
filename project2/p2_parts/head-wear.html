@@ -15,7 +15,7 @@
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
 
-  if (scroll >= 700 && scroll <= 900) {
+  if (scroll >= $(window).height-50) && scroll <= ($(window).height+50)) {
     $(".scene").removeClass("active");
     $(".scene2").addClass("active");
 
