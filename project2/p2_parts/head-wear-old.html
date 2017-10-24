@@ -81,7 +81,7 @@ $(window).scroll(function() {
     $("body").removeClass("scene-change-8");
     $("body").removeClass("scene-change-9");
     $("body").removeClass("scene-change-10");
-    $("body").addClass("scene-change-2");
+    $("body").addClass("scene-change-3");
 
     $('html, body').animate({
         scrollTop: $(".scene3").offset().top
@@ -108,7 +108,7 @@ $(window).scroll(function() {
     $("body").removeClass("scene-change-8");
     $("body").removeClass("scene-change-9");
     $("body").removeClass("scene-change-10");
-    $("body").addClass("scene-change-3");
+    $("body").addClass("scene-change-4");
 
     $('html, body').animate({
         scrollTop: $(".scene4").offset().top
@@ -125,6 +125,8 @@ $(window).scroll(function() {
 
     $(".img-hijab-eyes").removeClass("turnon");
 
+    $(".img-hijab-bg").addClass("fadeInUp");
+
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
@@ -134,7 +136,7 @@ $(window).scroll(function() {
     $("body").removeClass("scene-change-8");
     $("body").removeClass("scene-change-9");
     $("body").removeClass("scene-change-10");
-    $("body").addClass("scene-change-4");
+    $("body").addClass("scene-change-5");
 
     $('html, body').animate({
         scrollTop: $(".scene5").offset().top
@@ -158,7 +160,7 @@ $(window).scroll(function() {
     $("body").removeClass("scene-change-8");
     $("body").removeClass("scene-change-9");
     $("body").removeClass("scene-change-10");
-    $("body").addClass("scene-change-5");
+    $("body").addClass("scene-change-6");
 
     $('html, body').animate({
         scrollTop: $(".scene6").offset().top
@@ -302,7 +304,7 @@ img {
   }
 
   .scene-change-1 {
-    background-color:#4f53c6;
+    background-color:#8572e5;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -318,7 +320,7 @@ img {
   }
 
   .scene-change-3 {
-    background-color:#9a66d1;
+    background-color:#ffd902;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -326,7 +328,7 @@ img {
   }
 
   .scene-change-4 {
-    background-color:#ffe105;
+    background-color:#cf8be5;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -334,7 +336,7 @@ img {
   }
 
   .scene-change-5 {
-    background-color:#0180aa;
+    background-color:#466fe2;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -342,7 +344,7 @@ img {
   }
 
   .scene-change-6 {
-    background-color:#9e126f;
+    background-color:#80eddc;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -403,7 +405,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 3;
-      bottom: 16.9vh;
+      bottom: 17.53vh;
       margin: auto;
       margin-left: 30vw;
   }
@@ -423,7 +425,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 999 !important;
-      bottom: 12vh;
+      bottom: 12.5vh;
       margin-left: 0vw;
       opacity:0;
   }
@@ -433,7 +435,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 5;
-      bottom: 12vh;
+      bottom: 12.5vh;
       margin-left: 0vw;
       opacity:0;
   }
@@ -443,7 +445,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 6;
-      bottom: 12vh;
+      bottom: 12.5vh;
       margin-left: 0vw;
       opacity:0;
   }
@@ -453,7 +455,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 6;
-      bottom: 12vh;
+      bottom: 12.5vh;
       margin-left: 0vw;
       opacity:0;
   }
@@ -462,6 +464,43 @@ img {
       opacity:1;
       transition: ease 2s all;
   }
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .img-hijab-bg {
+      position: relative;
+      height: 50vw;
+      bottom: 0vh;
+      margin-left: -65vw;
+  }
+
+  .fadeInUp {
+    animation-name: fadeInUp;
+    duration: 1s;
+    animation-delay: 1.5s;
+  }
+
+p {
+  color: black;
+  text-align: center;
+  font-family: macho, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  bottom: 10px;
+}
+
 
   </style>
 
@@ -476,6 +515,7 @@ img {
     <img class="img-niqab-eyes" src="p2images/niqab-eyes.png">
     <img class="img-afrowoman-eyes" src="p2images/afrowoman-eyes.png">
   </div>
+
 
   <div>
 
@@ -493,6 +533,12 @@ img {
 
   <div class="scene scene4">
     <img class="moving-bodies" src="p2images/hijab.png">
+
+    <img class="img-hijab-bg" src="p2images/hijab_bg.png">
+
+    <p>
+      Now you see me.
+    </p>
   </div>
 
   <div class="scene scene5">
