@@ -29,6 +29,9 @@ $(window).scroll(function() {
     $(".scene").removeClass("active");
     $(".scene1").addClass("active");
 
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
+
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
     $("body").removeClass("scene-change-4");
@@ -45,6 +48,13 @@ $(window).scroll(function() {
   if (scroll >= winHeight-325 && scroll <= winHeight+325) {
     $(".scene").removeClass("active");
     $(".scene2").addClass("active");
+
+    $(".img-sikhturban-bg-B").addClass("fadeInUp");
+    $(".img-sikhturban-bg-R").addClass("fadeInRight");
+    $(".img-sikhturban-bg-L").addClass("fadeInLeft");
+
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-3");
@@ -72,6 +82,9 @@ $(window).scroll(function() {
 
     $(".img-hijab-eyes").removeClass("turnon");
 
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
+
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-3");
     $("body").removeClass("scene-change-4");
@@ -98,6 +111,10 @@ $(window).scroll(function() {
 
     $(".img-hijab-eyes").addClass("turnon");
 
+    $(".img-hijab-bg").addClass("fadeInUp");
+
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -125,7 +142,8 @@ $(window).scroll(function() {
 
     $(".img-hijab-eyes").removeClass("turnon");
 
-    $(".img-hijab-bg").addClass("fadeInUp");
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -150,6 +168,9 @@ $(window).scroll(function() {
   if (scroll >= winHeight5-300 && scroll <= winHeight5+300) {
     $(".scene").removeClass("active");
     $(".scene6").addClass("active");
+
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -177,6 +198,9 @@ $(window).scroll(function() {
 
     $(".img-niqab-eyes").removeClass("turnon");
 
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
+
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
@@ -203,6 +227,12 @@ $(window).scroll(function() {
 
     $(".img-niqab-eyes").addClass("turnon");
     $(".img-afrowoman-eyes").removeClass("turnon");
+
+    $(".img-niqab-bg-R").addClass("fadeInRight");
+    $(".img-niqab-bg-L").addClass("fadeInLeft");
+
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -232,6 +262,9 @@ $(window).scroll(function() {
     $(".img-niqab-eyes").removeClass("turnon");
     $(".img-afrowoman-eyes").addClass("turnon");
 
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
+
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
@@ -259,6 +292,9 @@ $(window).scroll(function() {
 
     $(".img-afrowoman-eyes").removeClass("turnon");
     $(".img-tattoo-eyes").addClass("turnon");
+
+    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -394,7 +430,8 @@ img {
       height: 50vw;
       background-color: none;
       z-index: 2;
-      bottom: 0px;
+      top: 1vh;
+      bottom: 0vh;
       margin: auto;
       margin-left: 30vw;
   }
@@ -405,7 +442,8 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 3;
-      bottom: 17.53vh;
+      top: -9vh;
+      bottom: 0vh;
       margin: auto;
       margin-left: 30vw;
   }
@@ -416,7 +454,8 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 8 !important;
-      bottom: -4.8vh;
+      top: 0vh;
+      bottom: 0vh;
       margin-left: 0vw;
   }
 
@@ -425,7 +464,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 999 !important;
-      bottom: 12.5vh;
+      bottom: 9.5vh;
       margin-left: 0vw;
       opacity:0;
   }
@@ -435,7 +474,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 5;
-      bottom: 12.5vh;
+      bottom: 9.5vh;
       margin-left: 0vw;
       opacity:0;
   }
@@ -445,7 +484,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 6;
-      bottom: 12.5vh;
+      bottom: 9.5vh;
       margin-left: 0vw;
       opacity:0;
   }
@@ -455,21 +494,44 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 6;
-      bottom: 12.5vh;
+      bottom: 9.5vh;
       margin-left: 0vw;
       opacity:0;
   }
 
   .turnon {
       opacity:1;
+      animation-delay: 1s;
       transition: ease 2s all;
   }
 
 
-  @keyframes fadeInUp {
+  @keyframes fadeIntext {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeupimg {
     from {
       opacity: 0;
       transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0%, 0);
+    }
+  }
+
+  @keyframes fadeInLeftimg {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
     }
 
     to {
@@ -478,30 +540,138 @@ img {
     }
   }
 
+  @keyframes fadeInRightimg {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .txt-firstread {
+      color: black;
+      text-align: center;
+      font-family: macho, sans-serif;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 600;
+      top: 8vh;
+      opacity:0;
+    }
+
+  .txt-secondread {
+      color: black;
+      text-align: center;
+      font-family: macho, sans-serif;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 600;
+      top: 8vh;
+      opacity:0;
+    }
+
+.img-sikhturban-bg-L {
+  position: sticky;
+  height: 50vw;
+  width: 77vw;
+  bottom: 0vh;
+  top: 0vh;
+  margin-left: -65vw;
+  z-index: 12;
+  opacity:0;
+}
+
+.img-sikhturban-bg-R {
+  position: sticky;
+  height: 50vw;
+  width: 77vw;
+  bottom: 0vh;
+  top: 0vh;
+  margin-left: -65vw;
+  z-index: 13;
+  opacity:0;
+}
+
+.img-sikhturban-bg-B {
+  position: sticky;
+  height: 38vw;
+  width: 84vw;
+  bottom: 90vh;
+  top: 0vh;
+  margin-left: 11vw;
+  z-index: 3;
+  opacity:0;
+}
+
+.img-niqab-bg-R {
+  position: relative;
+  height: 50vw;
+  width: 77vw;
+  bottom: 0vh;
+  top: 0vh;
+  margin-left: -65vw;
+  z-index: 10;
+  opacity:0;
+}
+
+.img-niqab-bg-L {
+  position: relative;
+  height: 50vw;
+  width: 77vw;
+  bottom: 0vh;
+  top: 0vh;
+  margin-left: -65vw;
+  z-index: 11;
+  opacity:0;
+}
+
   .img-hijab-bg {
       position: relative;
       height: 50vw;
       width: 90vw;
       bottom: 0vh;
       margin-left: -65vw;
+      opacity:0;
   }
 
   .fadeInUp {
-    animation-name: fadeInUp;
-    duration: 1s;
-    animation-delay: 1.5s;
+    animation-name: fadeupimg;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 2.5s;
   }
 
-p {
-  color: black;
-  text-align: center;
-  font-family: macho, sans-serif;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 600;
-  bottom: 10px;
+.fadeIn-firstread {
+  animation-name: fadeIntext;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
 }
 
+.fadeIn-secondread {
+  animation-name: fadeIntext;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 6s;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeftimg;
+  animation-fill-mode: forwards;
+  animation-duration: 3.25s;
+  animation-delay: 2.5s;
+}
+
+.fadeInRight {
+  animation-name: fadeInRightimg;
+  animation-fill-mode: forwards;
+  animation-duration: 3.25s;
+  animation-delay: 2.5s;
+}
 
   </style>
 
@@ -522,49 +692,123 @@ p {
 
   <div class="scene scene1">
     <img class="moving-bodies" src="p2images/headwrap.png">
+
+    <div class="txt-firstread">
+      Functionality, a symbol of solidarity of the past, fun, and heritage.
+
+    </div>
+    <div class="txt-secondread">
+      I wear my wrap as a queen wears a crown.
   </div>
+
 
   <div class="scene scene2">
     <img class="moving-bodies" src="p2images/sikhturban.png">
+
+    <img class="img-sikhturban-bg-B" src="p2images/sikhturban_bg-B.2.png">
+    <img class="img-sikhturban-bg-R" src="p2images/sikhturban_bg-R.2.png">
+    <img class="img-sikhturban-bg-L" src="p2images/sikhturban_bg-L.2.png">
+
+    <div class="txt-firstread">
+      I’m committed to peace.
+    </div>
+    <div class="txt-secondread">
+      As a Sikh, I choose to be recognized by my turban.
   </div>
+
 
   <div class="scene scene3">
     <img class="moving-bodies" src="p2images/dreads.png">
+
+    <div class="txt-firstread">
+      I don’t really think much about it.
+    </div>
+    <div class="txt-secondread">
+      If I grow my hair out, this is what it looks like.
   </div>
+
 
   <div class="scene scene4">
     <img class="moving-bodies" src="p2images/hijab.png">
 
     <img class="img-hijab-bg" src="p2images/hijab_bg.png">
 
-    <p>
+    <div class="txt-firstread">
       I'm not deeply conservative.
-    </p>
+    </div>
+    <div class="txt-secondread">
+      My hijab is not just sign of dedication to my god, it is my personal preference­.
   </div>
+
 
   <div class="scene scene5">
     <img class="moving-bodies" src="p2images/beardman.png">
+
+    <div class="txt-firstread">
+      I like to feel clean and comfortable.
+    </div>
+    <div class="txt-secondread">
+      Natural hair growth is what choose just as some choose shaving.
   </div>
+
 
   <div class="scene scene6">
     <img class="moving-bodies" src="p2images/jew.png">
+
+    <div class="txt-firstread">
+      You still see me, just not 'see, see'.
+    </div>
+    <div class="txt-secondread">
+      I’m more than what you can or cannot see.
   </div>
+
 
   <div class="scene scene7">
     <img class="moving-bodies" src="p2images/monk2-01.png">
+
+    <div class="txt-firstread">
+      I am devoted to humility.
+    </div>
+    <div class="txt-secondread">
+      I chose to cut my hair off along with the desires of this world.
   </div>
+
 
   <div class="scene scene8">
     <img class="moving-bodies" src="p2images/niqab.png">
+
+    <img class="img-niqab-bg-R" src="p2images/niqab_bg-R.png">
+    <img class="img-niqab-bg-L" src="p2images/niqab_bg-L.png">
+
+    <div class="txt-firstread">
+      You still see me, just not 'see, see'.
+    </div>
+    <div class="txt-secondread">
+      I’m more than what you can or cannot see.
+    </div>
   </div>
+
 
   <div class="scene scene9">
     <img class="moving-bodies" src="p2images/afro.png">
+
+    <div class="txt-firstread">
+      I’m not specifically trying to rock a “proud” or “confident” look.
+    </div>
+    <div class="txt-secondread">
+      My hair isn’t an aesthetic option. It’s a necessity.
   </div>
+
 
   <div class="scene scene10">
     <img class="moving-bodies" src="p2images/tattoo.png">
-  </div>
+
+    <div class="txt-firstread">
+      I don’t mean to say anything. I just like my choice of clothes.
+    </div>
+    <div class="txt-secondread">
+      But I guess that’s saying something and I’d hate if that was taken from me.
+    </div>
 
   </div>
 
