@@ -15,6 +15,7 @@
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
   var winHeight = $(window).height();
+  var winHeight1 = winHeight*1;
   var winHeight2 = winHeight*2;
   var winHeight3 = winHeight*3;
   var winHeight4 = winHeight*4;
@@ -24,7 +25,7 @@ $(window).scroll(function() {
   var winHeight8 = winHeight*8;
   var winHeight9 = winHeight*9;
 
-  if (scroll <= winHeight-100 && scroll <= winHeight+100) {
+  if (scroll <= winHeight-50 && scroll <= winHeight+50) {
     $(".scene").removeClass("active");
     $(".scene1").addClass("active");
 
@@ -68,7 +69,8 @@ $(window).scroll(function() {
   if (scroll >= winHeight2-325 && scroll <= winHeight2+325) {
     $(".scene").removeClass("active");
     $(".scene3").addClass("active");
-    $(".img-tattoo-eyes").addClass("turnon");
+
+    $(".img-hijab-eyes").removeClass("turnon");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-3");
@@ -93,7 +95,9 @@ $(window).scroll(function() {
   if (scroll >= winHeight3-300 && scroll <= winHeight3+300) {
     $(".scene").removeClass("active");
     $(".scene4").addClass("active");
-    $(".img-tattoo-eyes").removeClass("turnon");
+
+    $(".img-hijab-eyes").addClass("turnon");
+
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -118,6 +122,8 @@ $(window).scroll(function() {
   if (scroll >= winHeight4-300 && scroll <= winHeight4+300) {
     $(".scene").removeClass("active");
     $(".scene5").addClass("active");
+
+    $(".img-hijab-eyes").removeClass("turnon");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -167,6 +173,8 @@ $(window).scroll(function() {
     $(".scene").removeClass("active");
     $(".scene7").addClass("active");
 
+    $(".img-niqab-eyes").removeClass("turnon");
+
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
@@ -191,6 +199,9 @@ $(window).scroll(function() {
     $(".scene").removeClass("active");
     $(".scene8").addClass("active");
 
+    $(".img-niqab-eyes").addClass("turnon");
+    $(".img-afrowoman-eyes").removeClass("turnon");
+
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
@@ -214,6 +225,10 @@ $(window).scroll(function() {
   if (scroll >= winHeight8-300 && scroll <= winHeight8+300) {
     $(".scene").removeClass("active");
     $(".scene9").addClass("active");
+
+    $(".img-tattoo-eyes").removeClass("turnon");
+    $(".img-niqab-eyes").removeClass("turnon");
+    $(".img-afrowoman-eyes").addClass("turnon");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -240,6 +255,9 @@ $(window).scroll(function() {
     $(".scene").removeClass("active");
     $(".scene10").addClass("active");
 
+    $(".img-afrowoman-eyes").removeClass("turnon");
+    $(".img-tattoo-eyes").addClass("turnon");
+
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
@@ -261,8 +279,9 @@ $(window).scroll(function() {
   }
 
 
-});
 
+
+  });
 
 </script>
 
@@ -283,7 +302,7 @@ img {
   }
 
   .scene-change-1 {
-    background-color:black;
+    background-color:#4f53c6;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -291,7 +310,7 @@ img {
   }
 
   .scene-change-2 {
-    background-color:#45cc78;
+    background-color:#62cfe5;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -299,7 +318,7 @@ img {
   }
 
   .scene-change-3 {
-    background-color:yellow;
+    background-color:#9a66d1;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -307,7 +326,7 @@ img {
   }
 
   .scene-change-4 {
-    background-color:green;
+    background-color:#ffe105;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -315,7 +334,7 @@ img {
   }
 
   .scene-change-5 {
-    background-color:blue;
+    background-color:#0180aa;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -323,7 +342,7 @@ img {
   }
 
   .scene-change-6 {
-    background-color:purple;
+    background-color:#9e126f;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -331,7 +350,7 @@ img {
   }
 
   .scene-change-7 {
-    background-color:pink;
+    background-color:#99e894;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -339,7 +358,7 @@ img {
   }
 
   .scene-change-8 {
-    background-color:#9e126f;
+    background-color:#f475b5;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -394,19 +413,48 @@ img {
       align: center;
       width: 40vw;
       height: 50vw;
-      z-index: 999 !important;
-      bottom: 16.9vh;
+      z-index: 8 !important;
+      bottom: -4.8vh;
       margin-left: 0vw;
   }
 
   .img-tattoo-eyes {
-      position: absolute;
+      position: fixed;
       width: 40vw;
       height: 50vw;
-      z-index: 99999999 !important;
-      bottom: 0px;
+      z-index: 999 !important;
+      bottom: 12vh;
       margin-left: 0vw;
-      margin-top: -117vh;
+      opacity:0;
+  }
+
+  .img-hijab-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 5;
+      bottom: 12vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-niqab-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 6;
+      bottom: 12vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-afrowoman-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 6;
+      bottom: 12vh;
+      margin-left: 0vw;
       opacity:0;
   }
 
@@ -423,7 +471,7 @@ img {
 
   <div class="nonmoving-face">
     <img class="img-shoulders" src="p2images/eyes-shoulders-01.png">
-    <img class="img-tattoo-eyes" src="p2images/tattoo-eyes-01.png">
+    <img class="img-tattoo-eyes" src="p2images/tattoo-eyes.png">
     <img class="img-hijab-eyes" src="p2images/hijab-eyes.png">
     <img class="img-niqab-eyes" src="p2images/niqab-eyes.png">
     <img class="img-afrowoman-eyes" src="p2images/afrowoman-eyes.png">
@@ -456,7 +504,7 @@ img {
   </div>
 
   <div class="scene scene7">
-    <img class="moving-bodies" src="p2images/monk.png">
+    <img class="moving-bodies" src="p2images/monk2-01.png">
   </div>
 
   <div class="scene scene8">
