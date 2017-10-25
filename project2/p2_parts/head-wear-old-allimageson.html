@@ -1,0 +1,576 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+  <link rel="stylesheet" type = "text/css" href="styles.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+<!--Mousewheel "snap to position"-->
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  var winHeight = $(window).height();
+  var winHeight1 = winHeight*1;
+  var winHeight2 = winHeight*2;
+  var winHeight3 = winHeight*3;
+  var winHeight4 = winHeight*4;
+  var winHeight5 = winHeight*5;
+  var winHeight6 = winHeight*6;
+  var winHeight7 = winHeight*7;
+  var winHeight8 = winHeight*8;
+  var winHeight9 = winHeight*9;
+
+  if (scroll <= winHeight-50 && scroll <= winHeight+50) {
+    $(".scene").removeClass("active");
+    $(".scene1").addClass("active");
+
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-1");
+
+  }
+
+  if (scroll >= winHeight-325 && scroll <= winHeight+325) {
+    $(".scene").removeClass("active");
+    $(".scene2").addClass("active");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-2");
+
+    $('html, body').animate({
+        scrollTop: $(".scene2").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= winHeight2-325 && scroll <= winHeight2+325) {
+    $(".scene").removeClass("active");
+    $(".scene3").addClass("active");
+
+    $(".img-hijab-eyes").removeClass("turnon");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-3");
+
+    $('html, body').animate({
+        scrollTop: $(".scene3").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= winHeight3-300 && scroll <= winHeight3+300) {
+    $(".scene").removeClass("active");
+    $(".scene4").addClass("active");
+
+    $(".img-hijab-eyes").addClass("turnon");
+
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-4");
+
+    $('html, body').animate({
+        scrollTop: $(".scene4").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= winHeight4-300 && scroll <= winHeight4+300) {
+    $(".scene").removeClass("active");
+    $(".scene5").addClass("active");
+
+    $(".img-hijab-eyes").removeClass("turnon");
+
+    $(".img-hijab-bg").addClass("fadeInUp");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-5");
+
+    $('html, body').animate({
+        scrollTop: $(".scene5").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= winHeight5-300 && scroll <= winHeight5+300) {
+    $(".scene").removeClass("active");
+    $(".scene6").addClass("active");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-6");
+
+    $('html, body').animate({
+        scrollTop: $(".scene6").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= winHeight6-300 && scroll <= winHeight6+300) {
+    $(".scene").removeClass("active");
+    $(".scene7").addClass("active");
+
+    $(".img-niqab-eyes").removeClass("turnon");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-7");
+
+    $('html, body').animate({
+        scrollTop: $(".scene7").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= winHeight7-300 && scroll <= winHeight7+300) {
+    $(".scene").removeClass("active");
+    $(".scene8").addClass("active");
+
+    $(".img-niqab-eyes").addClass("turnon");
+    $(".img-afrowoman-eyes").removeClass("turnon");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-9");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-8");
+
+    $('html, body').animate({
+        scrollTop: $(".scene8").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+  if (scroll >= winHeight8-300 && scroll <= winHeight8+300) {
+    $(".scene").removeClass("active");
+    $(".scene9").addClass("active");
+
+    $(".img-tattoo-eyes").removeClass("turnon");
+    $(".img-niqab-eyes").removeClass("turnon");
+    $(".img-afrowoman-eyes").addClass("turnon");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-10");
+    $("body").addClass("scene-change-9");
+
+    $('html, body').animate({
+        scrollTop: $(".scene9").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+
+  if (scroll >= winHeight9-300 && scroll <= winHeight9+300) {
+    $(".scene").removeClass("active");
+    $(".scene10").addClass("active");
+
+    $(".img-afrowoman-eyes").removeClass("turnon");
+    $(".img-tattoo-eyes").addClass("turnon");
+
+    $("body").removeClass("scene-change-1");
+    $("body").removeClass("scene-change-2");
+    $("body").removeClass("scene-change-3");
+    $("body").removeClass("scene-change-4");
+    $("body").removeClass("scene-change-5");
+    $("body").removeClass("scene-change-6");
+    $("body").removeClass("scene-change-7");
+    $("body").removeClass("scene-change-8");
+    $("body").removeClass("scene-change-9");
+    $("body").addClass("scene-change-10");
+
+    $('html, body').animate({
+        scrollTop: $(".scene10").offset().top
+    }, 200);
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
+    return false;
+  }
+
+
+
+
+  });
+
+</script>
+
+  </head>
+
+
+
+
+  <style>
+
+img {
+  border: 1px solid grey;
+}
+
+  .scene {
+    height:100vh;
+    weight:100vw;
+  }
+
+  .scene-change-1 {
+    background-color:#8572e5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-2 {
+    background-color:#62cfe5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-3 {
+    background-color:#ffd902;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-4 {
+    background-color:#cf8be5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-5 {
+    background-color:#466fe2;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-6 {
+    background-color:#80eddc;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-7 {
+    background-color:#99e894;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-8 {
+    background-color:#f475b5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-9 {
+    background-color:#e28c02;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-10 {
+    background-color:#16b3cc;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+
+
+
+
+
+  .moving-bodies {
+      position: relative;
+      width: 40vw;
+      height: 50vw;
+      background-color: none;
+      z-index: 2;
+      bottom: 0px;
+      margin: auto;
+      margin-left: 30vw;
+  }
+
+  .nonmoving-face {
+      position: fixed;
+      align: center;
+      width: 40vw;
+      height: 50vw;
+      z-index: 3;
+      bottom: 17.53vh;
+      margin: auto;
+      margin-left: 30vw;
+  }
+
+  .img-shoulders {
+      position: relative;
+      align: center;
+      width: 40vw;
+      height: 50vw;
+      z-index: 8 !important;
+      bottom: -4.8vh;
+      margin-left: 0vw;
+  }
+
+  .img-tattoo-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 999 !important;
+      bottom: 12.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-hijab-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 5;
+      bottom: 12.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-niqab-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 6;
+      bottom: 12.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-afrowoman-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 6;
+      bottom: 12.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .turnon {
+      opacity:1;
+      transition: ease 2s all;
+  }
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .img-hijab-bg {
+      position: relative;
+      height: 50vw;
+      width: 90vw;
+      bottom: 0vh;
+      margin-left: -65vw;
+  }
+
+  .fadeInUp {
+    animation-name: fadeInUp;
+    duration: 1s;
+    animation-delay: 1.5s;
+  }
+
+p {
+  color: black;
+  text-align: center;
+  font-family: macho, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  bottom: 10px;
+}
+
+
+  </style>
+
+
+
+  <body class="scene-change1">
+
+  <div class="nonmoving-face">
+    <img class="img-shoulders" src="p2images/eyes-shoulders-01.png">
+    <img class="img-tattoo-eyes" src="p2images/tattoo-eyes.png">
+    <img class="img-hijab-eyes" src="p2images/hijab-eyes.png">
+    <img class="img-niqab-eyes" src="p2images/niqab-eyes.png">
+    <img class="img-afrowoman-eyes" src="p2images/afrowoman-eyes.png">
+  </div>
+
+
+  <div>
+
+  <div class="scene scene1">
+    <img class="moving-bodies" src="p2images/headwrap.png">
+  </div>
+
+  <div class="scene scene2">
+    <img class="moving-bodies" src="p2images/sikhturban.png">
+  </div>
+
+  <div class="scene scene3">
+    <img class="moving-bodies" src="p2images/dreads.png">
+  </div>
+
+  <div class="scene scene4">
+    <img class="moving-bodies" src="p2images/hijab.png">
+
+    <img class="img-hijab-bg" src="p2images/hijab_bg.png">
+
+    <p>
+      I'm not deeply conservative.
+    </p>
+  </div>
+
+  <div class="scene scene5">
+    <img class="moving-bodies" src="p2images/beardman.png">
+  </div>
+
+  <div class="scene scene6">
+    <img class="moving-bodies" src="p2images/jew.png">
+  </div>
+
+  <div class="scene scene7">
+    <img class="moving-bodies" src="p2images/monk2-01.png">
+  </div>
+
+  <div class="scene scene8">
+    <img class="moving-bodies" src="p2images/niqab.png">
+  </div>
+
+  <div class="scene scene9">
+    <img class="moving-bodies" src="p2images/afro.png">
+  </div>
+
+  <div class="scene scene10">
+    <img class="moving-bodies" src="p2images/tattoo.png">
+  </div>
+
+  </div>
+
+
+
+  </body>
+  </html>
