@@ -1,0 +1,504 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="headwear.js"></script>
+
+
+
+
+
+
+
+
+  <style>
+
+img {
+  border: 1px solid grey;
+}
+
+  .scene {
+    height:100vh;
+    width:100vw;
+    position:relative;
+  }
+
+  .scene-change-1 {
+    background-color:#8572e5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-2 {
+    background-color:#62cfe5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-3 {
+    background-color:#ffd902;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-4 {
+    background-color:#cf8be5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-5 {
+    background-color:#466fe2;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-6 {
+    background-color:#80eddc;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-7 {
+    background-color:#99e894;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-8 {
+    background-color:#f475b5;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-9 {
+    background-color:#e28c02;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .scene-change-10 {
+    background-color:#16b3cc;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+
+
+
+
+
+  .moving-bodies {
+    position: absolute;
+        width: 40vw;
+        height: 50vw;
+        z-index: 2;
+        margin: auto;
+        margin-left: 30vw;
+
+  }
+
+  .nonmoving-face {
+      position: fixed;
+      align: center;
+      width: 40vw;
+      height: 50vw;
+      z-index: 3;
+      top: 2vh;
+      margin: auto;
+      margin-left: 30vw;
+  }
+
+  .img-shoulders {
+      position: relative;
+      align: center;
+      width: 40vw;
+      height: 50vw;
+      z-index: 8 !important;
+      top: 0vh;
+      bottom: 0vh;
+      margin-left: 0vw;
+  }
+
+  .img-tattoo-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 999 !important;
+      bottom: 9.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-hijab-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 5;
+      bottom: 9.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-niqab-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 6;
+      bottom: 9.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .img-afrowoman-eyes {
+      position: fixed;
+      width: 40vw;
+      height: 50vw;
+      z-index: 6;
+      bottom: 9.5vh;
+      margin-left: 0vw;
+      opacity:0;
+  }
+
+  .turnon {
+      opacity:1;
+      animation-delay: 1s;
+      transition: ease 2s all;
+  }
+
+
+  @keyframes fadeIntext {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeupimg {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0%, 0);
+    }
+  }
+
+  @keyframes fadeInLeftimg {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeInRightimg {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .txt-firstread {
+      color: black;
+      position: static;
+      text-align: center;
+      font-family: macho, sans-serif;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 600;
+      top: 8vh;
+      opacity:0;
+    }
+
+  .txt-secondread {
+      color: black;
+      text-align: static;
+      position: relative;
+      font-family: macho, sans-serif;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 600;
+      top: 8vh;
+      opacity:0;
+    }
+
+.img-sikhturban-bg-L {
+  position: absolute;
+  height: 15vw;
+  width: 35vw;
+  bottom: 70vh;
+  top: 0vh;
+  margin-left: -30vw;
+  z-index: 1;
+  opacity:0;
+}
+
+.img-sikhturban-bg-R {
+  position: absolute;
+  height: 15vw;
+  width: 35vw;
+  bottom: 70vh;
+  top: 0vh;
+  margin-right: -40vw;
+  z-index: -1;
+  opacity:0;
+}
+
+.img-sikhturban-bg-B {
+  position: absolute;
+  height: 33vw;
+  width: 84vw;
+  bottom: 9vh;
+  top: 0vh;
+  margin-left: 10vw;
+  z-index: -1 !important;
+  opacity:0;
+}
+
+.img-niqab-bg-R {
+  position: relative;
+  height: 50vw;
+  width: 77vw;
+  bottom: 0vh;
+  top: 0vh;
+  margin-left: -65vw;
+  z-index: 10;
+  opacity:0;
+}
+
+.img-niqab-bg-L {
+  position: relative;
+  height: 50vw;
+  width: 77vw;
+  bottom: 0vh;
+  top: 0vh;
+  margin-left: -65vw;
+  z-index: 11;
+  opacity:0;
+}
+
+  .img-hijab-bg {
+      position: relative;
+      height: 50vw;
+      width: 90vw;
+      bottom: 0vh;
+      margin-left: -65vw;
+      opacity:0;
+  }
+
+  .fadeInUp {
+    animation-name: fadeupimg;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 2.5s;
+  }
+
+.fadeIn-firstread {
+  animation-name: fadeIntext;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+.fadeIn-secondread {
+  animation-name: fadeIntext;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 6s;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeftimg;
+  animation-fill-mode: forwards;
+  animation-duration: 3.25s;
+  animation-delay: 2.5s;
+}
+
+.fadeInRight {
+  animation-name: fadeInRightimg;
+  animation-fill-mode: forwards;
+  animation-duration: 3.25s;
+  animation-delay: 2.5s;
+}
+
+  </style>
+
+</head>
+
+  <body class="scene-change1">
+
+  <div class="nonmoving-face">
+    <img class="img-shoulders" src="p2images/eyes-shoulders-01.png">
+    <img class="img-tattoo-eyes" src="p2images/tattoo-eyes.png">
+    <img class="img-hijab-eyes" src="p2images/hijab-eyes.png">
+    <img class="img-niqab-eyes" src="p2images/niqab-eyes.png">
+    <img class="img-afrowoman-eyes" src="p2images/afrowoman-eyes.png">
+  </div><!-- nonmoving face -->
+
+
+
+  <div class="scene scene1">
+    <img class="moving-bodies" src="p2images/headwrap.png">
+
+    <div class="txt-firstread">
+      Functionality, a symbol of solidarity of the past, fun, and heritage.
+
+    </div>
+    <div class="txt-secondread">
+      I wear my wrap as a queen wears a crown.
+  </div>
+</div>
+
+
+  <div class="scene scene2">
+    <img class="moving-bodies" src="p2images/sikhturban.png">
+
+    <img class="img-sikhturban-bg-B" src="p2images/sikhturban_bg-B.2.png">
+    <img class="img-sikhturban-bg-R" src="p2images/sikhturban_bg-R.2.png">
+    <img class="img-sikhturban-bg-L" src="p2images/sikhturban_bg-L.2.png">
+
+    <div class="txt-firstread">
+      I’m committed to peace.
+    </div>
+    <div class="txt-secondread">
+      As a Sikh, I choose to be recognized by my turban.
+  </div></div>
+
+
+  <div class="scene scene3">
+    <img class="moving-bodies" src="p2images/dreads.png">
+
+    <div class="txt-firstread">
+      I don’t really think much about it.
+    </div>
+    <div class="txt-secondread">
+      If I grow my hair out, this is what it looks like.
+  </div></div>
+
+
+  <div class="scene scene4">
+    <img class="moving-bodies" src="p2images/hijab.png">
+
+    <img class="img-hijab-bg" src="p2images/hijab_bg.png">
+
+    <div class="txt-firstread">
+      I'm not deeply conservative.
+    </div>
+    <div class="txt-secondread">
+      My hijab is not just sign of dedication to my god, it is my personal preference­.
+  </div></div>
+
+
+  <div class="scene scene5">
+    <img class="moving-bodies" src="p2images/beardman.png">
+
+    <div class="txt-firstread">
+      I like to feel clean and comfortable.
+    </div>
+    <div class="txt-secondread">
+      Natural hair growth is what choose just as some choose shaving.
+  </div></div>
+
+
+  <div class="scene scene6">
+    <img class="moving-bodies" src="p2images/jew.png">
+
+    <div class="txt-firstread">
+      You still see me, just not 'see, see'.
+    </div>
+    <div class="txt-secondread">
+      I’m more than what you can or cannot see.
+  </div></div>
+
+
+  <div class="scene scene7">
+    <img class="moving-bodies" src="p2images/monk2-01.png">
+
+    <div class="txt-firstread">
+      I am devoted to humility.
+    </div>
+    <div class="txt-secondread">
+      I chose to cut my hair off along with the desires of this world.
+  </div></div>
+
+
+  <div class="scene scene8">
+    <img class="moving-bodies" src="p2images/niqab.png">
+
+    <img class="img-niqab-bg-R" src="p2images/niqab_bg-R.png">
+    <img class="img-niqab-bg-L" src="p2images/niqab_bg-L.png">
+
+    <div class="txt-firstread">
+      You still see me, just not 'see, see'.
+    </div>
+    <div class="txt-secondread">
+      I’m more than what you can or cannot see.
+    </div></div>
+
+
+  <div class="scene scene9">
+    <img class="moving-bodies" src="p2images/afro.png">
+
+    <div class="txt-firstread">
+      I’m not specifically trying to rock a “proud” or “confident” look.
+    </div>
+    <div class="txt-secondread">
+      My hair isn’t an aesthetic option. It’s a necessity.
+  </div></div>
+
+
+  <div class="scene scene10">
+    <img class="moving-bodies" src="p2images/tattoo.png">
+
+    <div class="txt-firstread">
+      I don’t mean to say anything. I just like my choice of clothes.
+    </div>
+    <div class="txt-secondread">
+      But I guess that’s saying something and I’d hate if that was taken from me.
+    </div></div>
+
+
+
+
+
+  </body>
+  </html>
