@@ -107,6 +107,13 @@ img {
     transition: all .5s ease-in-out;
   }
 
+  .scene-change-11 {
+    background-color: white;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
 
 
 
@@ -117,6 +124,7 @@ img {
         width: 40vw;
         height: 50vw;
         z-index: 2;
+        top: 0vh;
         margin: auto;
         margin-left: 30vw;
 
@@ -128,7 +136,7 @@ img {
       width: 40vw;
       height: 50vw;
       z-index: 3;
-      top: 2vh;
+      top: 0vh;
       margin: auto;
       margin-left: 30vw;
   }
@@ -144,49 +152,56 @@ img {
       margin-left: 0vw;
   }
 
-  .img-tattoo-eyes {
-      position: fixed;
-      width: 40vw;
-      height: 50vw;
-      z-index: 999 !important;
-      bottom: 9.5vh;
-      margin-left: 0vw;
-      opacity:0;
-  }
-
   .img-hijab-eyes {
-      position: fixed;
-      width: 40vw;
-      height: 50vw;
-      z-index: 5;
-      bottom: 9.5vh;
-      margin-left: 0vw;
-      opacity:0;
+    position: fixed;
+    align: center;
+    width: 40vw;
+    height: 50vw;
+    z-index: 3;
+    top: 0vh;
+    opacity: 0;
   }
 
   .img-niqab-eyes {
-      position: fixed;
-      width: 40vw;
-      height: 50vw;
-      z-index: 6;
-      bottom: 9.5vh;
-      margin-left: 0vw;
-      opacity:0;
+    position: fixed;
+    align: center;
+    width: 40vw;
+    height: 50vw;
+    z-index: 3;
+    top: 0vh;
+    opacity: 0;
   }
 
   .img-afrowoman-eyes {
-      position: fixed;
-      width: 40vw;
-      height: 50vw;
-      z-index: 6;
-      bottom: 9.5vh;
-      margin-left: 0vw;
-      opacity:0;
+    position: fixed;
+    align: center;
+    width: 40vw;
+    height: 50vw;
+    z-index: 3;
+    top: 0vh;
+    opacity: 0;
+  }
+
+  .img-tattoo-eyes {
+    position: fixed;
+    align: center;
+    width: 40vw;
+    height: 50vw;
+    z-index: 3;
+    top: 0vh;
+    opacity: 0;
   }
 
   .turnon {
       opacity:1;
       animation-delay: 1s;
+      transition: ease 2s all;
+  }
+
+  .turnoff {
+      opacity:0;
+      animation-delay: 1s;
+      animation-fill-mode: both;
       transition: ease 2s all;
   }
 
@@ -201,7 +216,7 @@ img {
     }
   }
 
-  @keyframes fadeupimg {
+  @keyframes fadeInUpimg {
     from {
       opacity: 0;
       transform: translate3d(0, 100%, 0);
@@ -237,106 +252,301 @@ img {
     }
   }
 
+  @keyframes rotateInUpLeftimg {
+    from {
+      transform-origin: left bottom;
+      transform: rotate3d(0, 0, 1, 45deg);
+      opacity: 0;
+    }
+
+    to {
+      transform-origin: left bottom;
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotateInUpRightimg {
+    from {
+      transform-origin: right bottom;
+      transform: rotate3d(0, 0, 1, -90deg);
+      opacity: 0;
+    }
+
+    to {
+      transform-origin: right bottom;
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDownimg {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   .txt-firstread {
-      color: black;
-      position: static;
-      text-align: center;
-      font-family: macho, sans-serif;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 600;
-      top: 8vh;
-      opacity:0;
+    color: black;
+    text-align: center;
+    position: absolute;
+    font-family: macho, sans-serif;
+    font-size: 1.8vw;
+    font-style: normal;
+    font-weight: 500;
+    top: 82vh;
+    width: 100%;
+    opacity: 0;
     }
 
   .txt-secondread {
-      color: black;
-      text-align: static;
-      position: relative;
-      font-family: macho, sans-serif;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 600;
-      top: 8vh;
-      opacity:0;
+    color: black;
+    text-align: center;
+    position: relative;
+    font-family: macho, sans-serif;
+    font-size: 1.8vw;
+    font-style: normal;
+    font-weight: 500;
+    top: 87vh;
+    width: 100%;
+    opacity: 0;
+    }
+
+    .img-headwrap-bg-L {
+      position: absolute;
+      height: 50vw;
+      width: 89vw;
+      top: 0vh;
+      margin-left: 5vw;
+      z-index: -1 !important;
+      opacity: 0;
+    }
+
+    .img-headwrap-bg-R {
+      position: absolute;
+      height: 50vw;
+      width: 89vw;
+      top: 0vh;
+      margin-left: 5vw;
+      z-index: -1 !important;
+      opacity: 0;
+    }
+
+      .img-headwrap-bg-F {
+        position: absolute;
+        height: 50vw;
+        width: 89vw;
+        top: 0vh;
+        margin-left: 5vw;
+        z-index: 5 !important;
+        opacity: 0;
+      }
+
+
+.img-beardman-bg-R {
+  position: absolute;
+  height: 50vw;
+  width: 89vw;
+  top: 0vh;
+  margin-left: 5vw;
+  z-index: -1 !important;
+  opacity: 0;
+}
+
+  .img-beardman-bg-L-m {
+    position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+  }
+
+  .img-beardman-bg-L-w {
+    position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+  }
+
+    .img-hijab-bg {
+      position: absolute;
+      height: 50vw;
+      width: 89vw;
+      top: 0vh;
+      margin-left: 5vw;
+      z-index: -1 !important;
+      opacity: 0;
     }
 
 .img-sikhturban-bg-L {
-  position: absolute;
-  height: 15vw;
-  width: 35vw;
-  bottom: 70vh;
-  top: 0vh;
-  margin-left: -30vw;
-  z-index: 1;
-  opacity:0;
+      position: absolute;
+      height: 50vw;
+      width: 89vw;
+      top: 0vh;
+      margin-left: 9vh;
+      z-index: 1;
+      opacity: 0;
 }
 
 .img-sikhturban-bg-R {
   position: absolute;
-  height: 15vw;
-  width: 35vw;
-  bottom: 70vh;
+  height: 50vw;
+  width: 89vw;
   top: 0vh;
-  margin-right: -40vw;
-  z-index: -1;
-  opacity:0;
+  margin-left: 9vh;
+  z-index: 1;
+  opacity: 0;
 }
 
 .img-sikhturban-bg-B {
   position: absolute;
-  height: 33vw;
-  width: 84vw;
-  bottom: 9vh;
-  top: 0vh;
-  margin-left: 10vw;
-  z-index: -1 !important;
-  opacity:0;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.img-dreads-bg {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.img-dreads-bgsc {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.img-jew-bg {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.img-jew-bg-bird {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.img-monk-bg-top {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.img-monk-bg-bottom {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
 }
 
 .img-niqab-bg-R {
-  position: relative;
-  height: 50vw;
-  width: 77vw;
-  bottom: 0vh;
-  top: 0vh;
-  margin-left: -65vw;
-  z-index: 10;
-  opacity:0;
+    position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
 }
 
 .img-niqab-bg-L {
-  position: relative;
-  height: 50vw;
-  width: 77vw;
-  bottom: 0vh;
-  top: 0vh;
-  margin-left: -65vw;
-  z-index: 11;
-  opacity:0;
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
 }
 
-  .img-hijab-bg {
-      position: relative;
-      height: 50vw;
-      width: 90vw;
-      bottom: 0vh;
-      margin-left: -65vw;
-      opacity:0;
-  }
+.img-afro-bg-L {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+.img-afro-bg-R {
+  position: absolute;
+    height: 50vw;
+    width: 89vw;
+    top: 0vh;
+    margin-left: 5vw;
+    z-index: -1 !important;
+    opacity: 0;
+}
+
+
+
+.fadeInDown {
+  animation-name: fadeInDownimg;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
 
   .fadeInUp {
-    animation-name: fadeupimg;
+    animation-name: fadeInUpimg;
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
     animation-delay: 2.5s;
+  }
+
+  .fadeInUp-moon {
+    animation-name: fadeInUpimg;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 5.15s;
   }
 
 .fadeIn-firstread {
   animation-name: fadeIntext;
   animation-fill-mode: forwards;
   animation-duration: 1.5s;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 
 .fadeIn-secondread {
@@ -349,15 +559,29 @@ img {
 .fadeInLeft {
   animation-name: fadeInLeftimg;
   animation-fill-mode: forwards;
-  animation-duration: 3.25s;
+  animation-duration: 3s;
   animation-delay: 2.5s;
 }
 
 .fadeInRight {
   animation-name: fadeInRightimg;
   animation-fill-mode: forwards;
-  animation-duration: 3.25s;
+  animation-duration: 3s;
   animation-delay: 2.5s;
+}
+
+.rotateInUpLeft {
+  animation-name: rotateInUpLeftimg;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 2.5s;
+}
+
+.rotateInUpRight {
+  animation-name: rotateInUpLeftimg;
+  animation-fill-mode: forwards;
+  animation-duration: 1.25s;
+  animation-delay: 3.5s;
 }
 
   </style>
@@ -379,6 +603,10 @@ img {
   <div class="scene scene1">
     <img class="moving-bodies" src="p2images/headwrap.png">
 
+    <img class="img-headwrap-bg-L" src="p2images/headwrap_bg_L.png">
+    <img class="img-headwrap-bg-R" src="p2images/headwrap_bg_R.png">
+    <img class="img-headwrap-bg-F" src="p2images/headwrap_bg_F.png">
+
     <div class="txt-firstread">
       Functionality, a symbol of solidarity of the past, fun, and heritage.
 
@@ -392,9 +620,9 @@ img {
   <div class="scene scene2">
     <img class="moving-bodies" src="p2images/sikhturban.png">
 
-    <img class="img-sikhturban-bg-B" src="p2images/sikhturban_bg-B.2.png">
-    <img class="img-sikhturban-bg-R" src="p2images/sikhturban_bg-R.2.png">
-    <img class="img-sikhturban-bg-L" src="p2images/sikhturban_bg-L.2.png">
+    <img class="img-sikhturban-bg-B" src="p2images/sikhturban_bg-B.png">
+    <img class="img-sikhturban-bg-R" src="p2images/sikhturban_bg-R.png">
+    <img class="img-sikhturban-bg-L" src="p2images/sikhturban_bg-L.png">
 
     <div class="txt-firstread">
       I’m committed to peace.
@@ -406,6 +634,9 @@ img {
 
   <div class="scene scene3">
     <img class="moving-bodies" src="p2images/dreads.png">
+
+    <img class="img-dreads-bg" src="p2images/dreads_grocerystore.png">
+    <img class="img-dreads-bgsc" src="p2images/dreads_shoppingcart.png">
 
     <div class="txt-firstread">
       I don’t really think much about it.
@@ -431,6 +662,10 @@ img {
   <div class="scene scene5">
     <img class="moving-bodies" src="p2images/beardman.png">
 
+    <img class="img-beardman-bg-R" src="p2images/beardman_bg_R.png">
+    <img class="img-beardman-bg-L-w" src="p2images/beardman_bg_L_Win.png">
+    <img class="img-beardman-bg-L-m" src="p2images/beardman_bg_L_moon.png">
+
     <div class="txt-firstread">
       I like to feel clean and comfortable.
     </div>
@@ -442,6 +677,9 @@ img {
   <div class="scene scene6">
     <img class="moving-bodies" src="p2images/jew.png">
 
+    <img class="img-jew-bg" src="p2images/jew_bg.png">
+    <img class="img-jew-bg-bird" src="p2images/jew_bg_bird.png">
+
     <div class="txt-firstread">
       You still see me, just not 'see, see'.
     </div>
@@ -452,6 +690,9 @@ img {
 
   <div class="scene scene7">
     <img class="moving-bodies" src="p2images/monk2-01.png">
+
+    <img class="img-monk-bg-top" src="p2images/monk_bg_mountains.png">
+    <img class="img-monk-bg-bottom" src="p2images/monk_bg_flowers.png">
 
     <div class="txt-firstread">
       I am devoted to humility.
@@ -474,9 +715,11 @@ img {
       I’m more than what you can or cannot see.
     </div></div>
 
-
   <div class="scene scene9">
     <img class="moving-bodies" src="p2images/afro.png">
+
+    <img class="img-afro-bg-L" src="p2images/afro_bgmirror.png">
+    <img class="img-afro-bg-R" src="p2images/afro_bgshower.png">
 
     <div class="txt-firstread">
       I’m not specifically trying to rock a “proud” or “confident” look.
@@ -497,6 +740,13 @@ img {
     </div></div>
 
 
+
+    <div class="scene">
+<div class="txt-firstread">
+  our choice is our voice.
+</div>
+
+      </div>
 
 
 
