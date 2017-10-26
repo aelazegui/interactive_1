@@ -1,7 +1,17 @@
 
 
+// !!! you were using comment method in html !!!
+// Mousewheel "snap to position"
 
-<!--Mousewheel "snap to position"-->
+// here I created a function runs immediately as the page is loaded
+// it will run only once since we are calling it once
+$(document).ready(function(){
+  // I added a div at the end of ur html file
+  // 1000 = 1 second, you can change it
+
+  $('#opening').fadeOut(5000);
+  $('#opening-face').fadeOut(3700);
+})
 
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
@@ -20,15 +30,13 @@ $(window).scroll(function() {
     $(".scene").removeClass("active");
     $(".scene1").addClass("active");
 
-
-    $(".img-shoulders-indark").addClass("turnon-opener");
     $(".scene-change-1.2s").addClass("turnoff");
 
-    $(".img-headwrap-bg-L").addClass("fadeInDown");
-    $(".img-headwrap-bg-R").addClass("fadeInDown");
+    $(".img-headwrap-bg-L").addClass("opener-fadeInDown");
+    $(".img-headwrap-bg-R").addClass("opener-fadeInUp");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".scene1 .txt-secondread").addClass("fadeIn-secondread");
+    $(".scene1 .txt-firstread").addClass("opener-fadeIn-firstread");
+    $(".scene1 .txt-secondread").addClass("opener-fadeIn-secondread");
 
     $("body").removeClass("scene-change-2");
     $("body").removeClass("scene-change-3");
@@ -50,8 +58,9 @@ $(window).scroll(function() {
     $(".img-sikhturban-bg-R").addClass("fadeInRight");
     $(".img-sikhturban-bg-L").addClass("fadeInLeft");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
+    $(".scene2 .txt-firstread").addClass("fadeIn-firstread");
     $(".scene2 .txt-secondread").addClass("fadeIn-secondread");
+    $(".scene1 .txt-firstread").removeClass("fadeIn-firstread");
     $(".scene1 .txt-secondread").removeClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
@@ -84,8 +93,8 @@ $(window).scroll(function() {
     $(".img-dreads-bgsc").addClass("fadeInLeft");
 
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene3 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene3 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-3");
@@ -115,8 +124,8 @@ $(window).scroll(function() {
 
     $(".img-hijab-bg").addClass("fadeInUp");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene4 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene4 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -148,8 +157,8 @@ $(window).scroll(function() {
     $(".img-beardman-bg-L-m").addClass("fadeInUp-moon");
     $(".img-beardman-bg-R").addClass("fadeInRight");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene5 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene5 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -178,8 +187,8 @@ $(window).scroll(function() {
     $(".img-jew-bg").addClass("fadeInUp");
     $(".img-jew-bg-bird").addClass("fadeInRight");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene6 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene6 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -207,11 +216,11 @@ $(window).scroll(function() {
 
     $(".img-niqab-eyes").removeClass("turnon");
 
-    $(".img-monk-bg-top").addClass("fadeInUp");
-    $(".img-monk-bg-bottom").addClass("fadeInDown");
+    $(".img-monk-bg-top").addClass("fadeInUp-mountains");
+    $(".img-monk-bg-bottom").addClass("fadeInDown-grass");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene7 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene7 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -243,8 +252,8 @@ $(window).scroll(function() {
     $(".img-niqab-bg-R").addClass("fadeInRight");
     $(".img-niqab-bg-L").addClass("fadeInLeft");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene8 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene8 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -277,8 +286,8 @@ $(window).scroll(function() {
     $(".img-afro-bg-R").addClass("fadeInLeft");
     $(".img-afro-bg-L").addClass("fadeInRight");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene9 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene9 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
@@ -311,8 +320,8 @@ $(window).scroll(function() {
     $(".img-tattoo-bg-L").addClass("fadeInDown");
     $(".img-tattoo-bg-R").addClass("fadeInUp");
 
-    $(".txt-firstread").addClass("fadeIn-firstread");
-    $(".txt-secondread").addClass("fadeIn-secondread");
+    $(".scene10 .txt-firstread").addClass("fadeIn-firstread");
+    $(".scene10 .txt-secondread").addClass("fadeIn-secondread");
 
     $("body").removeClass("scene-change-1");
     $("body").removeClass("scene-change-2");
