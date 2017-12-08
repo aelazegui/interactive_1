@@ -1,0 +1,232 @@
+/*Positioning and Alignment*/
+
+
+div {
+  position:relative;
+}
+
+body {
+  background: #00add6; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #586cbc, #290081, #000919); /* Safari */
+  background: -o-radial-gradient(circle,  #586cbc, #290081, #000919); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #586cbc, #290081, #000919); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #586cbc, #290081, #000919); /* Standard syntax */
+}
+
+.day {
+  background: #44bfff; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #44bfff, #c6ffff); /* Safari */
+  background: -o-radial-gradient(circle, #44bfff, #c6ffff); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #44bfff, #c6ffff); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #44bfff, #c6ffff); /* Standard syntax */
+
+  }
+
+.sunset {
+  background: #ffb600; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #ffb600, #ff4b00); /* Safari */
+  background: -o-radial-gradient(circle, #ffb600, #ff4b00); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #ffb600, #ff4b00); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #ffb600, #ff4b00); /* Standard syntax */
+
+  }
+
+.night {
+  background: #290081; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #290081, #00add6); /* Safari */
+  background: -o-radial-gradient(circle, #290081, #00add6); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #290081, #00add6); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #290081, #00add6); /* Standard syntax */
+
+  }
+
+
+
+.center-img {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.headline-text {
+  text-align: center;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: -1;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.action-illustration {
+  height: 65px;
+  width: 85px;
+  border: white 1.5px;
+  border-radius: 20px;
+}
+
+.action-title{
+  text-align: center;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.action-description {
+  text-align: left;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0px 40px 40px 40px;
+}
+
+.subtitle-text {
+  text-align: center;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: -1;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.center-text {
+  text-align:center;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+.centerme {
+margin-left:25vw;
+}
+
+
+.padding-buttons {
+  padding-top:5px;
+}
+
+.padding-top-1x {
+  padding-top:20px;
+}
+
+.padding-top-2x {
+  padding-top:40px;
+}
+
+.padding-top-3x {
+  padding-top:80px;
+}
+
+.padding-top-4x {
+  padding-top:100px;
+}
+
+.padding-bottom-1x {
+  padding-bottom:20px;
+}
+
+.padding-bottom-2x {
+  padding-bottom:40px;
+}
+
+.padding-bottom-3x {
+  padding-bottom:80px;
+}
+
+.padding-top-4x {
+  padding-top:100px;
+}
+
+/*Width Classes*/
+
+.full-width {
+width:100vw;
+}
+
+.half-width {
+width:50vw;
+}
+
+.quarter-width {
+width:25vw;
+}
+
+.three-fourths-width {
+width:75vw;
+}
+
+.third-width {
+width:33.3vw;
+}
+
+.two-thirds-width {
+width:66.66vw;
+}
+/*Height Classes*/
+
+.height-1x {
+height:50px;
+}
+
+.height-2x {
+height:100px;
+}
+
+.height-3x {
+height:150px;
+}
+
+.height-full {
+height: 100vh;
+}
+
+
+/*Height Classes*/
+
+.turn-blue {
+  background-color:blue;
+}
+
+.turn-red {
+  background-color:red;
+}
+
+.turn-yellow {
+  background-color:yellow;
+}
+
+.turn-green {
+  background-color:green;
+}
+
+.turn-black {
+  background-color:black;
+}
+
+.turn-grey {
+  background-color:grey;
+}
+
+.turn-purple {
+  background-color:purple;
+}
+
+.borderme {
+  background color: none;
+  border: 1px solid white;
+}
+
+/*Height Classes*/
+.button {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px !important;
+    margin: 5px 5px 5px 5px;
+    float: left;
+    display: inherit;
+    max-width: 303px;
+    margin-top: 2rem !important;
+}

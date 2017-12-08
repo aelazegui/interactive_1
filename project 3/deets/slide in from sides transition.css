@@ -1,0 +1,182 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 980px;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: cubic-bezier(.39,.575,.565,1);
+    transition-timing-function: cubic-bezier(.39,.575,.565,1);
+}
+bundle.css:1
+.footer, .header {
+    background: #fff;
+}
+bundle.css:1
+address, article, aside, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.header_content {
+    position: relative;
+    height: 60px;
+    width: 100%;
+}
+
+.header_main {
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+
+.footer, .header {
+    background: #fff;
+}
+
+.headerLogo {
+    position: absolute;
+    height: 22px;
+    top: 50%;
+    width: 234px;
+    overflow: hidden;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 30px;
+}
+
+.headerLogo_mark {
+    height: 22px;
+    overflow: hidden;
+    -webkit-transition-property: -webkit-transform opacity;
+    transition-property: -webkit-transform opacity;
+    transition-property: transform opacity;
+    transition-property: transform opacity,-webkit-transform opacity;
+    -webkit-transition-duration: .45s;
+    transition-duration: .45s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+element.style {
+}
+
+.headerMenu {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+div {
+    display: block;
+}
+
+.headerNav {
+    right: 30px;
+    width: 715px;
+    height: 60px;
+    overflow: hidden;
+    transition-property: opacity;
+    transition-duration: .5s;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+
+.headerNav_content {
+    -webkit-transition-property: -webkit-transform opacity;
+    transition-property: -webkit-transform opacity;
+    transition-property: transform opacity;
+    transition-property: transform opacity,-webkit-transform opacity;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    -webkit-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    transform: translateX(300px);
+    opacity: 0;
+    z-index: 2;
+}
+
+.headerLang_link a, .headerNav_content {
+    -webkit-transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    height: 60px;
+}
+
+.headerNav, .headerNav_content {
+   -webkit-transition-duration: .5s;
+}
+
+html {
+    font-size: 15px;
+    line-height: 1.6667;
+}
+
+.is-defaultOpen .headerLogo_typo, .is-open .headerLogo_typo {
+    opacity: 1;
+    -webkit-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+img[Attributes Style] {
+    width: 40px;
+    height: 22px;
+}
+
+a, body {
+    color: #000;
+}
+
+
+strong, b {
+    font-weight: bold;
+}
+
+.headerLogo_typo, .headerNav {
+    -webkit-transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+
+body {
+   -webkit-text-size-adjust: none;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-family: AdobeGaramondW01-Regula,GaramondPremrPro,"リュウミン R-KL","Ryumin Regular KL",RyuminPro-Regular,"游明朝","Yu Mincho","游明朝体",YuMincho,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro",HiraMinProN-W3,"HGS明朝E","ＭＳ Ｐ明朝","MS PMincho",serif;
+}
+
+
+.globalNav_more, .header_overlay, .loading, .share_overlay {
+    pointer-events: none;
+}
+
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+address, article, aside, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
